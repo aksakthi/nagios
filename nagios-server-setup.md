@@ -132,17 +132,17 @@ sudo /etc/init.d/nagios start
 
 ```
 # Access Nagios Web Interface Using nagiosadmin and its password.
-http://hawk.hinagro.com/nagios
+http://example.com/nagios
 ```
 
 
 ### Add a Host to Monitor
-* Nagios Server IP: hawk.hinagro.com
-* Ubuntu Host IP: crane
+* Nagios Server IP: example.com
+* Ubuntu Host IP: 192.168.2.123
 
 ```
 # Connect to host using ssh
-ssh crane
+ssh 192.168.2.123
 
 # Install NRPE Service.
 sudo apt-get install nagios-nrpe-server nagios-plugins
@@ -150,8 +150,8 @@ sudo apt-get install nagios-nrpe-server nagios-plugins
 # Edit the nrpe file /etc/nagios/nrpe.cfg.
 sudo vim /etc/nagios/nrpe.cfg
 
-# Add Nagios Server IP hawk.hinagro.com
-allowed_hosts=127.0.0.1 hawk.hinagro.com
+# Add Nagios Server IP example.com
+allowed_hosts=127.0.0.1 example.com
 
 # Start nrpe service
 sudo /etc/init.d/nagios-nrpe-server restart
