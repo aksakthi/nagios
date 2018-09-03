@@ -1,2 +1,1 @@
-#Nagios server setup
-##Nagio server and client setup
+### Nagio server and client setup
